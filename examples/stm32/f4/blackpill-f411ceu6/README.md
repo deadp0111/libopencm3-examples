@@ -32,3 +32,7 @@ dfu-util -a 0 -s 0x08000000:leave -D blink.bin
 ## Examples
 
 - `blink/` — toggles the onboard PC13 LED using `gpio_toggle()`.
+- `usart/` — transmits a repeating digit sequence over USART2 (PA2, TX
+  only) at 115200 8N1, toggling the onboard PC13 LED with every byte
+  sent. Connect a USB-serial adapter's RX line to PA2 to view the
+  output.
